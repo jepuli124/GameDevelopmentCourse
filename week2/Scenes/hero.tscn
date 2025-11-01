@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2rr3w7j2r1o2"]
+
+[ext_resource type="Texture2D" uid="uid://dpo3jd5u3yev3" path="res://Assets/Textures/Hero.png" id="1_qhmnl"]
+[ext_resource type="Script" uid="uid://mq3d0b0onqo8" path="res://Scripts/hero.gd" id="1_stlmo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_stlmo"]
+radius = 33.5149
+
+[node name="Hero" type="RigidBody2D"]
+can_sleep = false
+freeze = true
+script = ExtResource("1_stlmo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qhmnl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("CircleShape2D_stlmo")

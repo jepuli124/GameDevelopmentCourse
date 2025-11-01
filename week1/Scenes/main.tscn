@@ -8,4 +8,5 @@ script = ExtResource("1_bo1nx")
 
 [node name="Icon" type="Sprite2D" parent="."]
 unique_name_in_owner = true
+position = Vector2(600, 300)
 texture = ExtResource("2_8gbba")

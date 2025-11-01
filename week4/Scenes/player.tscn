@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://0co0d5iq8is1"]
+
+[ext_resource type="Script" uid="uid://ctwo51j584a6l" path="res://Scripts/player.gd" id="1_v0iea"]
+[ext_resource type="SpriteFrames" uid="uid://c6w8pv1pf3ecf" path="res://Assets/Animations/player_anim.tres" id="2_cvnsp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvnsp"]
+height = 26.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_v0iea")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_cvnsp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_cvnsp")
+animation = &"idle"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(6, 6)

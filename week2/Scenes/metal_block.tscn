@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://1kp27vln0lop"]
+
+[ext_resource type="Texture2D" uid="uid://8b2irpsecmrn" path="res://Assets/Textures/Metal_block.png" id="1_7hoap"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tyok7"]
+size = Vector2(69, 68)
+
+[node name="MetalBlock" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_7hoap")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_tyok7")

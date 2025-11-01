@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b63q16j5p3blc"]
+
+[ext_resource type="Script" uid="uid://bfthw67v27ebs" path="res://Scripts/wood_beam.gd" id="1_6c6kk"]
+[ext_resource type="Texture2D" uid="uid://dsomuir8phcsb" path="res://Assets/Textures/Wood_beam.png" id="1_tbiof"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6c6kk"]
+size = Vector2(217, 68)
+
+[node name="WoodBeam" type="RigidBody2D"]
+input_pickable = true
+can_sleep = false
+script = ExtResource("1_6c6kk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_tbiof")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_6c6kk")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
